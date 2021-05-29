@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'accounts',
     'realtors',
-    'listings'
+    'listings',
+    'contacts',
 
 
 ]
@@ -94,12 +95,13 @@ DATABASES = {
     }
 }
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smpt.EmailBackend'
-# EMAIL_HOST = 'smpt.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = 'rapparealtygroup@gmail.com'
-# EMAIL_HOST_PASSWORD = 'amdalghbboatzjdk'
-# EMAIL_USE_TLS = True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'rapparealtygroup1@gmail.com'
+EMAIL_HOST_PASSWORD = 'ydazxrbnxhrzvgir'
+EMAIL_USE_TLS = True
 
 
 # Password validation
