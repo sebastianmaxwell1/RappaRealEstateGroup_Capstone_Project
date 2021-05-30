@@ -19,15 +19,15 @@ class ContactCreateView(APIView):
                 + data['email']
                 + '\n\nMessage:\n'
                 + data['message'],
-                '[rapparealtygroup1@gmail.com]',
-                ['[rapparealtygroup1@gmail.com]]'],
+                'rapparealtygroup1@gmail.com',
+                ['rapparealtygroup1@gmail.com'],
                 fail_silently=False
             )
 
             contact = Contact(name=data['name'], email=data['email'], subject=data['subject'], message=data['message'])
             contact.save()
 
-            return Response({'success': 'Message sent! Youll hear from us shortly!'})
+            return Response({'success': 'Message sent! Youll hear from us'})
 
         except:
             return Response({'error': 'Message failed to send!'})
