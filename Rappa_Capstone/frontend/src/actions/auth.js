@@ -25,7 +25,7 @@ export const login = (email, password) => async dispatch => {
             payload: res.data
         });
 
-        dispatch(setAlert('Authenticated successfully', 'success'));
+        dispatch(setAlert('Welcome to Rappa Realty Group!', 'success'));
     } catch (err) {
         dispatch({
             type: LOGIN_FAIL
@@ -63,6 +63,6 @@ export const signup = ({ name, email, password, password2 }) => async dispatch =
 };
 
 export const logout = () => dispatch => {
-    dispatch(setAlert('logout successful.', 'success'));
+    dispatch(setAlert('You have logged out! Hope to see you soon!.', 'success'));
     dispatch({ type: LOGOUT });
 }
