@@ -11,6 +11,7 @@ import NotFound from './components/NotFound';
 import Layout from './hocs/Layout';
 
 
+
 import { Provider } from 'react-redux';
 import store from './store';
 
