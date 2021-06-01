@@ -33,16 +33,18 @@ const ListingForm = (props) => {
         };
 
         setLoading(true);
-        axios.post('http://127.0.0.1:8000/api/listings/search', { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }, config)
+        axios.post(`http://127.0.0.1:8000/api/listings/search`, { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }, config)
         .then(res => {
             setLoading(false);
             props.setListings(res.data);
             window.scrollTo(0, 0);
+            console.log(res.data)
         })
         .catch(err => {
             setLoading(false);
             window.scrollTo(0, 0);
         })
+        
     };
 
     return (
@@ -162,7 +164,7 @@ const ListingForm = (props) => {
                                 width={50}
                             />
                         </div> : 
-                        <button className='listingform__button listingform__button--primary'>Search</button>
+                        <button className='listingform__button listingform__button--primary'>Search Listings!</button>
                     }
                 </div>
             </div>
