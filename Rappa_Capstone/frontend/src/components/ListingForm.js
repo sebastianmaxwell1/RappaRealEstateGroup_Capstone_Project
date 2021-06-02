@@ -32,13 +32,19 @@ const ListingForm = (props) => {
             }
         };
 
+        var item = { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }
+
+        // console.log(item)
+
         setLoading(true);
-        axios.post(`http://127.0.0.1:8000/api/listings/search`, { sale_type, price, bedrooms, home_type, bathrooms, sqft, days_listed, has_photos, open_house, keywords }, config)
+        axios.post(`http://127.0.0.1:8000/api/listings/search`,  item , config)
         .then(res => {
             setLoading(false);
             props.setListings(res.data);
             window.scrollTo(0, 0);
-            console.log(res.data)
+            // console.log(item)
+            // console.log(res.data)
+            
         })
         .catch(err => {
             setLoading(false);
