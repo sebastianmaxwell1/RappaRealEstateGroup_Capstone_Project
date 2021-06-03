@@ -10,8 +10,9 @@ import SignUp from './containers/SignUp';
 import NotFound from './components/NotFound';
 import Layout from './hocs/Layout';
 import PrivateRoute from './components/privateRoute';
+import ChatApp from './ChatApp'
 
-
+ 
 
 import { Provider } from 'react-redux';
 import store from './store';
@@ -31,10 +32,13 @@ const App = () => (
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={SignUp} />
                     <Route component={NotFound} />
+                    <ChatApp />
                 </Switch>
             </Layout>
         </Router>
     </Provider>
+
+    
 );
 
 export default App;

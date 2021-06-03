@@ -20,8 +20,8 @@ export class MapContainer extends Component {
         lat: 27.4692,
         lng: -80.2916
       }
-    };
-  }
+    }
+  };
 
   handleChange = address => {
     this.setState({ address });
@@ -104,6 +104,6 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: (' AIzaSyDnY85_E14zik_gxWKAY7X1I622L_WBEvM')
+  apiKey: ('AIzaSyCDbj2OrURu92wySvXFcUHHyZV3zAHxGkw')
 })(MapContainer)
 

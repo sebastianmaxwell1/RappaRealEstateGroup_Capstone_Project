@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet';
 import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
-import GoogleMap from '../components/GoogleMap';
+// import GoogleMap from '../components/GoogleMap';
+
+import ChatApp from '../ChatApp';
 
 const Home = () => {
     const [listings, setListings] = useState([]);
@@ -67,7 +69,8 @@ const Home = () => {
                 </div>
             </section>
             <section>
-                <GoogleMap />
+                {/* <GoogleMap /> */}
+                <ChatApp />
             </section>
         </main>
     );

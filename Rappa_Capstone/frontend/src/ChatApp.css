@@ -1,9 +1,8 @@
-.ChatbotApp {
+.ChatApp {
     text-align: center;
-    background-color: #282c34;
+    background-color: beige;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  

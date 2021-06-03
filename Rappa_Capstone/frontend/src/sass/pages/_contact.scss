@@ -16,7 +16,7 @@
         &__label {
             font-size: 1.6rem;
             margin-bottom: 0.6rem;
-            color: $color-primary;
+            color: navy;
         }
 
         &__input {
@@ -24,9 +24,9 @@
             height: 3.2rem;
             padding: 1.5rem 2rem;
             font-size: 1.6rem;
-            outline-color: $color-primary;
+            outline-color: navy;
             caret-color: $color-primary;
-            color: $color-grey-dark;
+            color: navy;
             border: none;
             background-color: $color-grey-light;
             border-radius: 0.4rem;
@@ -51,15 +51,15 @@
             padding: 1rem 2rem;
             width: 60%;
             margin-left: 20%;
-            background-color: $color-primary;
-            color: $color-white;
+            background-color: beige;
+            color: navy;
             border: none;
             cursor: pointer;
             margin-top: 1rem;
             outline: none;
 
             &:hover {
-                background-color: $color-tertiary;
+                background-color: lightblue;
             }
         }
 
