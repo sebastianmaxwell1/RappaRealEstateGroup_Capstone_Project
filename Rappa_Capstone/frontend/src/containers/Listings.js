@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import Card from '../components/Card';
 import Pagination from '../components/Pagination';
+import GoogleMapApp from '../components/GoogleMapApp';
 
 const Listings = () => {
     const [listings, setListings] = useState([]);
@@ -138,6 +139,7 @@ const Listings = () => {
                         setActive={setActive}
                     />
                 </div>
+                <GoogleMapApp />
             </section>
         </main>
     );

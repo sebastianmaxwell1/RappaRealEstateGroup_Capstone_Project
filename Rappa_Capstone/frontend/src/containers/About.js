@@ -16,7 +16,7 @@ const About = () => {
 
         const getTopSeller = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/realtors/topseller`, config);
+                const res = await axios.get(`http://127.0.0.1:8000/api/realtors/topseller`, config);
                 setTopSeller(res.data);
             }
             catch (err) {
@@ -93,7 +93,7 @@ const About = () => {
                     <div className='about__display'>
                         <img className='about__display__image' src={seller.photo} alt='' />
                     </div>
-                    <h3 className='about__topseller'>Top Seller:</h3>
+                    <h3 className='about__topseller'>Broker/Owner:</h3>
                     <p className='about__realtor'>{seller.name}</p>
                     <p className='about__contact'>{seller.phone}</p>
                     <p className='about__contact'>{seller.email}</p>
@@ -104,6 +104,7 @@ const About = () => {
 
         return result;
     };
+    
 
     return (
         <main className='about'>
@@ -122,13 +123,13 @@ const About = () => {
                     <div className='col-3-of-4'>
                         <h2 className='about__subheading'>What can Rappa sell for you?!</h2>
                         <p className='about__paragraph'>
-                            Coming soon
+                            Rappa Realty Group was created and founded by Keith A. Rappa in 2017. Rappa Realty Group focuses on building relationships with the community. We proudly serve the beautiful Treasure Coast.
                         </p>    
                         <div className='about__display'>
                             <img className='about__display__image' src={ftpierce} alt='' />
                         </div>
                         <p className='about__paragraph'>
-                          Coming soon
+                          Beautiful Downtown Fort Pierce, Florida
                         </p>
                     </div>
                     <div className='col-1-of-4'>
@@ -141,9 +142,15 @@ const About = () => {
                     <h2 className='about__subheading'>Rappas Realtors!</h2>
                 </div>
                 {getAllRealtors()}
+                <button href="sms:1-772-528-3553">Text Keith Rappa</button> 
+
+                <br></br>
+                <a href="sms:1-772-359-0255">Text Sebastian!</a>
+                <br></br>
+                <a href="sms:1-772-216-8601">Text Brennan!</a>
             </section>
         </main>
     );
 };
-
+ <button className='auth__form__button'>Register with Rappa!</button>
 export default About;

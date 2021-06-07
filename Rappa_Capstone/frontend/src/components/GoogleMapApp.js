@@ -20,8 +20,8 @@ export class MapContainer extends Component {
         lat: 27.4692,
         lng: -80.2916
       }
-    }
-  };
+    };
+  }
 
   handleChange = address => {
     this.setState({ address });
@@ -34,6 +34,7 @@ export class MapContainer extends Component {
       .then(latLng => {
         console.log('Success', latLng);
 
+        
         this.setState({ mapCenter: latLng });
       })
       .catch(error => console.error('Error', error));
@@ -61,9 +62,8 @@ export class MapContainer extends Component {
                   const className = suggestion.active
                     ? 'suggestion-item--active'
                     : 'suggestion-item';
-                  
                   const style = suggestion.active
-                    ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+                    ? { backgroundColor: 'navy', cursor: 'pointer' }
                     : { backgroundColor: '#ffffff', cursor: 'pointer' };
                   return (
                     <div
@@ -104,6 +104,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-  apiKey: ('AIzaSyCDbj2OrURu92wySvXFcUHHyZV3zAHxGkw')
+  apiKey: ('AIzaSyC6ANmGfTrPLwqjMZ_xcX9VyrnIt9Zw0DM')
 })(MapContainer)
-

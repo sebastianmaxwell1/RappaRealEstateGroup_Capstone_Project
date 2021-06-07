@@ -4,6 +4,7 @@ import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
 // import GoogleMap from '../components/GoogleMap';
+import logo from '../images/logo.jpeg';
 
 import ChatApp from '../ChatApp';
 
@@ -66,13 +67,14 @@ const Home = () => {
                             />
                         ) : null
                     }
+                    
                 </div>
             </section>
             <section>
-                {/* <GoogleMap /> */}
                 <ChatApp />
             </section>
         </main>
+        
     );
 };
 

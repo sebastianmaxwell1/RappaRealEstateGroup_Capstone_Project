@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { logout } from '../actions/auth';
 import Alert from './Alert';
 import PropTypes from 'prop-types';
+// import Logo from '../images/logo.jpeg';
 
 const navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     const authLinks = (
@@ -22,6 +23,7 @@ const navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
             <nav className='navbar'>
                 <div className='navbar__top'>
                     <div className='navbar__top__logo'>
+                        {/* <NavLink to="/"><img src={Logo} alt="logo" className="logo" /></NavLink> */}
                         <Link className='navbar__top__logo__link' to='/'>Rappa Realty Group</Link>
                     </div>
                     <div className='navbar__top__auth'>
@@ -33,13 +35,13 @@ const navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                         <NavLink className='navbar__bottom__item__link' exact to='/'>Home</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/listings'>Listings</NavLink>
+                        <NavLink className='navbar__bottom__item__link' exact to='/listings'>Rappas Listings</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/about'>About</NavLink>
+                        <NavLink className='navbar__bottom__item__link' exact to='/about'>About Rappa</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/contact'>Contact</NavLink>
+                        <NavLink className='navbar__bottom__item__link' exact to='/contact'>Contact/Newsletter</NavLink>
                     </li>
                 </div>
             </nav>

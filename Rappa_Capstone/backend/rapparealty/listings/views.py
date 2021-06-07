@@ -72,53 +72,53 @@ class SearchView(APIView):
         elif bedrooms == '5+':
             bedrooms = 5
 
-        queryset = queryset.filter(bedrooms__gte=bedrooms)
+        # queryset = queryset.filter(bedrooms__gte=bedrooms)
 
-        home_type = data['home_type']
-        queryset = queryset.filter(home_type__iexact=home_type)
+        # home_type = data['home_type']
+        # queryset = queryset.filter(home_type__iexact=home_type)
 
-        bathrooms = data['bathrooms']
-        if bathrooms == '0+':
-            bathrooms = 0.0
-        elif bathrooms == '1+':
-            bathrooms = 1.0
-        elif bathrooms == '2+':
-            bathrooms = 2.0
-        elif bathrooms == '3+':
-            bathrooms = 3.0
-        elif bathrooms == '4+':
-            bathrooms = 4.0
+        # bathrooms = data['bathrooms']
+        # if bathrooms == '0+':
+        #     bathrooms = 0.0
+        # elif bathrooms == '1+':
+        #     bathrooms = 1.0
+        # elif bathrooms == '2+':
+        #     bathrooms = 2.0
+        # elif bathrooms == '3+':
+        #     bathrooms = 3.0
+        # elif bathrooms == '4+':
+        #     bathrooms = 4.0
 
-        queryset = queryset.filter(bathrooms__gte=bathrooms)
+        # queryset = queryset.filter(bathrooms__gte=bathrooms)
 
-        sqft = data['sqft']
-        if sqft == '1000+':
-            sqft = 1000
-        elif sqft == '1200+':
-            sqft = 1200
-        elif sqft == '1500+':
-            sqft = 1500
-        elif sqft == '2000+':
-            sqft = 2000
-        elif sqft == 'Any':
-            sqft = 0
+        # sqft = data['sqft']
+        # if sqft == '1000+':
+        #     sqft = 1000
+        # elif sqft == '1200+':
+        #     sqft = 1200
+        # elif sqft == '1500+':
+        #     sqft = 1500
+        # elif sqft == '2000+':
+        #     sqft = 2000
+        # elif sqft == 'Any':
+        #     sqft = 0
 
-        if sqft != 0:
-            queryset = queryset.filter(sqft__gte=sqft)
+        # if sqft != 0:
+        #     queryset = queryset.filter(sqft__gte=sqft)
 
-        days_passed = data['days_listed']
-        if days_passed == '1 or less':
-            days_passed = 1
-        elif days_passed == '2 or less':
-            days_passed = 2
-        elif days_passed == '5 or less':
-            days_passed = 5
-        elif days_passed == '10 or less':
-            days_passed = 10
-        elif days_passed == '20 or less':
-            days_passed = 20
-        elif days_passed == 'Any':
-            days_passed = 0
+        # days_passed = data['days_listed']
+        # if days_passed == '1 or less':
+        #     days_passed = 1
+        # elif days_passed == '2 or less':
+        #     days_passed = 2
+        # elif days_passed == '5 or less':
+        #     days_passed = 5
+        # elif days_passed == '10 or less':
+        #     days_passed = 10
+        # elif days_passed == '20 or less':
+        #     days_passed = 20
+        # elif days_passed == 'Any':
+        #     days_passed = 0
 
         # for query in queryset:
         #     num_days = (datetime.now(timezone.utc) - query.list_date).days

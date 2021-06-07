@@ -6,7 +6,7 @@ const Options = (props) => {
   const options = [
     {
       text: "Contact a Agent",
-      handler: props.actionProvider.handleJavascriptQuiz,
+      handler: props.actionProvider.contactAgent,
       id: 1,
     },
     { text: "Buying", handler: () => {}, id: 2 },
