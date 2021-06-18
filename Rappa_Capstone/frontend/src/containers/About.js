@@ -142,15 +142,18 @@ const About = () => {
                     <h2 className='about__subheading'>Rappas Realtors!</h2>
                 </div>
                 {getAllRealtors()}
-                <button href="sms:1-772-528-3553">Text Keith Rappa</button> 
-
-                <br></br>
-                <a href="sms:1-772-359-0255">Text Sebastian!</a>
-                <br></br>
-                <a href="sms:1-772-216-8601">Text Brennan!</a>
             </section>
         </main>
     );
 };
  <button className='auth__form__button'>Register with Rappa!</button>
 export default About;
+
+
+{/* <button href="sms:1-772-528-3553">Text Keith Rappa</button> 
+
+<br></br>
+<a href="sms:1-772-359-0255">Text Sebastian!</a>
+<br></br>
+<a href="sms:1-772-216-8601">Text Brennan!</a>
+</section> */}

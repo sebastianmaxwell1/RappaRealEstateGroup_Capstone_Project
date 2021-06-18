@@ -4,7 +4,9 @@ import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
 // import GoogleMap from '../components/GoogleMap';
-import logo from '../images/logo.jpeg';
+// import logo from '../images/logo.jpeg';
+// import Banner from '../assets/images/Banner.jpeg';
+import Banner from '../components/Banner';
 
 import ChatApp from '../ChatApp';
 
@@ -39,14 +41,16 @@ const Home = () => {
 
     return (
         <main className='home'>
+            <Banner/>
             <Helmet>
+            
                 <title>Rappa Realty Group - Home</title>
                 <meta
                     name='description'
                     content='Rappa Realty Group Home Page'
                 />
             </Helmet>
-            <section className='home__form'>
+             {/* <section className='home__form'>
                 <ListingForm setListings={setListings} />
             </section>
             <section className='home__listings'>
@@ -69,9 +73,9 @@ const Home = () => {
                     }
                     
                 </div>
-            </section>
+            </section> */}
             <section>
-                <ChatApp />
+    
             </section>
         </main>
         

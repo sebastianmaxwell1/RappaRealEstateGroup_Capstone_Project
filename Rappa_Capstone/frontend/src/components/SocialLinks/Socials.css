@@ -1,0 +1,34 @@
+.social-container {
+    padding: 20px 50px;
+ 
+}
+
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+}
+
+a.social:hover {
+    transform: translateY(-2px);
+}
+
+.facebook {
+    color: white;
+
+}
+
+.instagram {
+    color: white;
+    
+}
+
+.social-title {
+    font-size: 10px;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+    margin: 0 3rem;
+    top: 52;
+
+}

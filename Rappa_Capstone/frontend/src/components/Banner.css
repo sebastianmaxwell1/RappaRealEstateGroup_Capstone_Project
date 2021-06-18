@@ -1,0 +1,31 @@
+.banner {
+position: relative;
+height: 50vh;
+width: 100%;
+background: url('https://di-uploads-pod18.dealerinspire.com/vatlandcdjr/uploads/2019/05/beaches-fort-pierce-fl.jpg');
+background-size: cover;
+background-position: center center;
+
+}
+
+.banner .banner-info {
+    position: absolute;
+    top:15%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.banner .banner-info h1{
+    position: relative;
+    font-size: 3.5rem;
+    color: navy;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.banner .banner-info p {
+    position: relative;
+    font-size: 2.5rem;
+    color: navy;
+font-style: italic;}

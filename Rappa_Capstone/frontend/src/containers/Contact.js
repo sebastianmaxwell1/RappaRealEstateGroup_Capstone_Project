@@ -50,7 +50,7 @@ const Contact = ({ setAlert }) => {
     return (
         <div className='contact'>
             <Helmet>
-                <title>Rappa Realty Goup- Contact/Newsletter</title>
+                <title>Rappa Realty Goup- Contact Us</title>
                 <meta
                     name='description'
                     content='Contact us'
@@ -60,7 +60,7 @@ const Contact = ({ setAlert }) => {
                            Contact Rappa!
                         </h1>    
             <p className='contact__newsletter'>
-                            Have a question? Contact us and one of our agents will answer you shortly! You will also receive our monthly newsletters!
+                            What can RAPPA sell for you? Contact us and one of our agents will answer you shortly!
                         </p>    
             <form className='contact__form' onSubmit={e => onSubmit(e)}>
                 <label className='contact__form__label' htmlFor='name'>Name*</label>
