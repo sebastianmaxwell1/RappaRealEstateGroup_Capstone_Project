@@ -5,7 +5,7 @@ const Banner = () => {
     return(
         <div className="banner">
             <div className="banner-info">
-                <h1> WELCOME TO <br></br>RAPPA REALTY GROUP</h1>
+                <h1> RAPPA REALTY GROUP</h1>
                 <p> "What can RAPPA sell for you?"</p>
             </div>
             

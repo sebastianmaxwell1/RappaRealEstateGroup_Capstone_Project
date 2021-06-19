@@ -139,7 +139,7 @@ const Listings = () => {
                         setActive={setActive}
                     />
                 </div>
-                <GoogleMapApp />
+                {/* <GoogleMapApp /> */}
             </section>
         </main>
     );

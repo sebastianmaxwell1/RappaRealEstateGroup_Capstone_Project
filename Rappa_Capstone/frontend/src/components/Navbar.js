@@ -25,13 +25,17 @@ const navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                 <div className='navbar__top'>
                     <Social/>
                     <div className='navbar__top__logo'>
-                        <Link className='navbar__top__logo__link' to='/'>Rappa Realty Group</Link>
+                        {/* <Link className='navbar__top__logo__link' to='/'>Rappa Realty Group</Link> */}
                     </div>
                     <div className='navbar__top__auth'>
                         { !loading && (<Fragment>{ isAuthenticated ? authLinks : guestLinks }</Fragment>) }
                     </div>
                 </div>
                 <div className='navbar__bottom'>
+                    
+                    <li className="navbar__logo">
+                        <NavLink to="/"><img src={Logo} alt="logo" className="logo" /></NavLink> 
+                    </li>
                     
                     <li className='navbar__bottom__item'>
                         <NavLink className='navbar__bottom__item__link' exact to='/'>Home</NavLink>
@@ -40,7 +44,7 @@ const navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
                         <NavLink className='navbar__bottom__item__link' exact to='/listings'>Rappas Listings</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/about'>About Rappa</NavLink>
+                        <NavLink className='navbar__bottom__item__link' exact to='/about'>Team Rappa</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
                         <NavLink className='navbar__bottom__item__link' exact to='/contact'>Contact Rappa</NavLink>
@@ -66,4 +70,4 @@ export default connect(mapStateToProps, { logout })(navbar);
 
 
 // logo
-// ({/* <NavLink to="/"><img src={Logo} alt="logo" className="logo" /></NavLink> */}
+{/* <NavLink to="/"><img src={Logo} alt="logo" className="logo" /></NavLink>  */}

@@ -12,6 +12,7 @@ import Layout from './hocs/Layout';
 import PrivateRoute from './components/privateRoute';
 import ChatApp from './ChatApp'
 import logo from './images/logo.jpeg';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -36,19 +37,12 @@ const App = () => (
                     <Route exact path='/signup' component={SignUp} />
                     <Route component={NotFound} />
                     <ChatApp />
-                    {/* <div  class="bg_image"
-                    style={{
-                    backgroundImage: `url(${logo})`,
-                    backgroundSize: "cover",
-                    height: "100vh",
-                    // color: "#f5f5f5"
-                }}
-            >
-            </div> */}
                 </Switch>
             </Layout>
         </Router>
+        <Footer />
     </Provider>
+
     
     
 );

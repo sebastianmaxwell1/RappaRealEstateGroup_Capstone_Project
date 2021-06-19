@@ -1,0 +1,16 @@
+.row-container {
+    color: white;
+    background-color: navy;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .nav-links {
+      color: white;
+  }
+
+  a {
+      color: white;
+  }

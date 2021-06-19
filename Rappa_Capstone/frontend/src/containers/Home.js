@@ -50,7 +50,7 @@ const Home = () => {
                     content='Rappa Realty Group Home Page'
                 />
             </Helmet>
-             {/* <section className='home__form'>
+             <section className='home__form'>
                 <ListingForm setListings={setListings} />
             </section>
             <section className='home__listings'>
@@ -73,7 +73,7 @@ const Home = () => {
                     }
                     
                 </div>
-            </section> */}
+            </section> 
             <section>
     
             </section>
