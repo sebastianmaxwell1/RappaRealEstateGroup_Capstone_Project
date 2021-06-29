@@ -40,8 +40,8 @@ const App = () => (
                 </Switch>
             </Layout>
         </Router>
-        <Footer />
     </Provider>
+    
 
     
     

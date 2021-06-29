@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer/Footer';
 
 const ListingDetail = (props) => {
     const [listing, setListing] = useState({});
@@ -283,12 +284,12 @@ const ListingDetail = (props) => {
                 />
             </Helmet>
             <div className='listingdetail__header'>
-                <h1 className='listingdetail__title'>{listing.title}</h1>
-                <p className='listingdetail__location'>{listing.city}, {listing.state}, {listing.zipcode}</p>
+                <h1 className='listingdetail__title'>{listing.title}</h1>...
+                <p className='listingdetail__location'>{listing.city},{listing.state},{listing.zipcode}</p>
             </div>
             <div className='row'>
                 <div className='listingdetail__breadcrumb'>
-                    <Link className='listingdetail__breadcrumb__link' to='/'>Home</Link> / {listing.title}
+                    <Link className='listingdetail__breadcrumb__link' to='/'>Home</Link>  {listing.title}
                 </div>
             </div>
             <div className='row'>
@@ -331,6 +332,7 @@ const ListingDetail = (props) => {
                 <p className='listingdetail__description'>{listing.description}</p>
             </div>
             {displayInteriorImages()}
+            <Footer />
         </div>
     );
 };

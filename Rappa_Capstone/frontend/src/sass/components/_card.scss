@@ -1,6 +1,6 @@
 .card {
     padding: 4rem 3rem;
-    background-color: beige;
+    background-color: lightgrey;
     border-radius: 0.5rem;
 
     &__header {
@@ -48,15 +48,16 @@
 
     &__link {
         font-size: 1.6rem;
-        color: navy;
+        background-color: navy;
+        color: white;
         padding: 1rem 1.5rem;
         border: 0.1rem solid navy;
         text-decoration: none;
 
         &:hover {
             color: $color-white;
-            border: 0.1rem solid $color-secondary;
-            background-color: lightblue;
+            border: 0.1rem solid navy;
+            background-color: lightgrey;
         }
     }
 }

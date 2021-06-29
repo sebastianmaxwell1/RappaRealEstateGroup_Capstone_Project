@@ -3,10 +3,8 @@ import { Helmet } from 'react-helmet';
 import ListingForm from '../components/ListingForm';
 import Listings from '../components/Listings';
 import Pagination from '../components/Pagination';
-// import GoogleMap from '../components/GoogleMap';
-// import logo from '../images/logo.jpeg';
-// import Banner from '../assets/images/Banner.jpeg';
 import Banner from '../components/Banner';
+import Footer from '../components/Footer/Footer';
 
 import ChatApp from '../ChatApp';
 
@@ -50,6 +48,7 @@ const Home = () => {
                     content='Rappa Realty Group Home Page'
                 />
             </Helmet>
+            
              <section className='home__form'>
                 <ListingForm setListings={setListings} />
             </section>
@@ -76,7 +75,9 @@ const Home = () => {
             </section> 
             <section>
     
-            </section>
+            </section> 
+            <ChatApp />
+            <Footer />
         </main>
         
     );

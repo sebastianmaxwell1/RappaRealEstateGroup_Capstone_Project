@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { login } from '../actions/auth';
+import Footer from '../components/Footer/Footer';
 
 const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -60,9 +61,11 @@ const Login = ({ login, isAuthenticated }) => {
                 <button className='auth__form__button'>Login</button>
             </form>
             <p className='auth__authtext'>
-                What can RAPPA sell for you? Join us and find out! <Link className='auth__authtext__link' to='/signup'>Sign Up</Link>
+                What can RAPPA sell for you? <br></br>Join us and find out! <Link className='auth__authtext__link' to='/signup'>Sign Up</Link>
             </p>
+            
         </div>
+        
     );
 };
 

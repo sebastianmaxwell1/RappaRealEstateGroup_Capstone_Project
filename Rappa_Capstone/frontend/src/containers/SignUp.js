@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import { setAlert } from '../actions/alert';
 import { signup } from '../actions/auth';
 import PropTypes from 'prop-types';
+import Footer from '../components/Footer/Footer';
 
 const SignUp = ({ setAlert, signup, isAuthenticated }) => {
     const [formData, setFormData] = useState({
@@ -89,8 +90,9 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
                 <button className='auth__form__button'>Register with Rappa!</button>
             </form>
             <p className='auth__authtext'>
-                Already have an account? <Link className='auth__authtext__link' to='/login'>Sign In</Link>
+                <Link className='auth__authtext__link' to='/login'>Sign In</Link>
             </p>
+        
         </div>
     );
 

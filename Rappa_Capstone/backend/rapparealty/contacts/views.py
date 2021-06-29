@@ -15,6 +15,8 @@ class ContactCreateView(APIView):
                 data['subject'],
                 'Name: '
                 + data['name']
+                + '\nPhone: '
+                + data['phone']
                 + '\nEmail: '
                 + data['email']
                 + '\n\nMessage:\n'
@@ -24,7 +26,7 @@ class ContactCreateView(APIView):
                 fail_silently=False
             )
 
-            contact = Contact(name=data['name'], email=data['email'], subject=data['subject'], message=data['message'])
+            contact = Contact(name=data['name'],phone=data['phone number'], email=data['email'], subject=data['subject'], message=data['message'])
             contact.save()
 
             return Response({'success': 'Message sent! Youll hear from us'})

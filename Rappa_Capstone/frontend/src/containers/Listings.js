@@ -4,6 +4,7 @@ import axios from 'axios';
 import Card from '../components/Card';
 import Pagination from '../components/Pagination';
 import GoogleMapApp from '../components/GoogleMapApp';
+import Footer from '../components/Footer/Footer';
 
 const Listings = () => {
     const [listings, setListings] = useState([]);
@@ -124,13 +125,18 @@ const Listings = () => {
                     content='Listings page'
                 />
             </Helmet>
+            <header className='listingdetail__header'>
+                <h1 className='listingdetail__heading'> Rappa's Listings</h1>
+                </header>
+                <br></br>
+                < p className='listingdetail__para'>Please Login or Signup to view listings from Rappa Realty Group</p>
             <section className='listings__listings'>
                 {displayListings()}
             </section>
             <section className='listings__pagination'>
                 <div className='row'>
                     <Pagination
-                        itemsPerPage={3}
+                        itemsPerPage={10}
                         count={count}
                         visitPage={visitPage}
                         previous={previous_number}
@@ -141,6 +147,7 @@ const Listings = () => {
                 </div>
                 {/* <GoogleMapApp /> */}
             </section>
+            <Footer />
         </main>
     );
 };

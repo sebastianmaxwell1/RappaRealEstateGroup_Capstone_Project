@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { setAlert } from '../actions/alert';
 import Loader from 'react-loader-spinner';
 import PropTypes from 'prop-types';
-
+import Footer from '../components/Footer/Footer';
 const Contact = ({ setAlert }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -13,12 +13,13 @@ const Contact = ({ setAlert }) => {
 
     const [formData, setFormData] = useState({
         name: '',
+        phone:'',
         email: '',
         subject: '',
         message: ''
     });
 
-    const { name, email, subject, message } = formData;
+    const { name, phone, email, subject, message } = formData;
 
     const [loading, setLoading] = useState(false);
 
@@ -34,7 +35,7 @@ const Contact = ({ setAlert }) => {
         };
 
         setLoading(true);
-        axios.post(`http://127.0.0.1:8000/api/contacts/`, { name, email, subject, message }, config)
+        axios.post(`http://127.0.0.1:8000/api/contacts/`, { name, phone, email, subject, message }, config)
         .then(res => {
             setAlert('Message Sent', 'success');
             setLoading(false);
@@ -56,12 +57,11 @@ const Contact = ({ setAlert }) => {
                     content='Contact us'
                 />
             </Helmet>
-            <h1 className='contact__header'>
-                           Contact Rappa!
-                        </h1>    
-            <p className='contact__newsletter'>
-                            What can RAPPA sell for you? Contact us and one of our agents will answer you shortly!
-                        </p>    
+            <header className='contact__header'>
+                <h1 className='contact__heading'> Contact Rappa</h1>
+                </header>
+                <p className='contact__para' > What can RAPPA sell for you? <br></br>Fill out our contact form and an agent will reach out shortly!</p>
+                       
             <form className='contact__form' onSubmit={e => onSubmit(e)}>
                 <label className='contact__form__label' htmlFor='name'>Name*</label>
                 <input 
@@ -71,6 +71,16 @@ const Contact = ({ setAlert }) => {
                     placeholder='Full Name' 
                     onChange={e => onChange(e)} 
                     value={name} 
+                    required 
+                />
+                <label className='contact__form__label' htmlFor='phone'>Phone Number*</label>
+                <input 
+                    className='contact__form__input' 
+                    name='phone' 
+                    type='text' 
+                    placeholder='Phone Number' 
+                    onChange={e => onChange(e)} 
+                    value={subject} 
                     required 
                 />
                 <label className='contact__form__label' htmlFor='email'>Email*</label>
@@ -88,7 +98,7 @@ const Contact = ({ setAlert }) => {
                     className='contact__form__input' 
                     name='subject' 
                     type='text' 
-                    placeholder='Buying Home' 
+                    placeholder='Subject' 
                     onChange={e => onChange(e)} 
                     value={subject} 
                     required 
@@ -107,7 +117,7 @@ const Contact = ({ setAlert }) => {
                     <div className='contact__form__loader'>
                         <Loader
                             type="Oval"
-                            color="gold"
+                            color="navy"
                             height={50}
                             width={50}
                         />
@@ -115,7 +125,16 @@ const Contact = ({ setAlert }) => {
                     <button className='contact__form__button' htmltype='submit'>Send</button>
                 }
             </form>
+            <br>
+            </br>
+            <br>
+            </br>
+            {/* <Footer /> */}
+            
         </div>
+        
+                
+        
     );
 };
 

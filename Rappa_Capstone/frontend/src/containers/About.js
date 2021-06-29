@@ -2,6 +2,7 @@ import React, {useState, useEffect, Fragment } from 'react';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import ftpierce from '../assets/images/ftpierce.jpeg';
+import Footer from '../components/Footer/Footer';
 
 const About = () => {
     const [topSeller, setTopSeller] = useState([]);
@@ -116,7 +117,7 @@ const About = () => {
                 />
             </Helmet>
             <header className='about__header'>
-                <h1 className='about__heading'>About Rappa Realty Group</h1>
+                <h1 className='about__heading'>Meet Team Rappa</h1>
             </header>
             <section className='about__info'>
                 <div className='row'>
@@ -143,7 +144,9 @@ const About = () => {
                 </div>
                 {getAllRealtors()}
             </section>
+            <Footer />
         </main>
+        
     );
 };
  <button className='auth__form__button'>Register with Rappa!</button>

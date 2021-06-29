@@ -11,12 +11,12 @@
 
         &--active {
             color: $color-white;
-            background-color: beige;
+            background-color: navy;
         }
 
         &:hover {
             color: $color-white;
-            background-color: navy;
+            background-color: lightgrey;
         }
     }
 }
