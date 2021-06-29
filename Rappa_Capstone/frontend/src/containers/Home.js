@@ -6,7 +6,6 @@ import Pagination from '../components/Pagination';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer/Footer';
 
-import ChatApp from '../ChatApp';
 
 const Home = () => {
     const [listings, setListings] = useState([]);
@@ -76,7 +75,6 @@ const Home = () => {
             <section>
     
             </section> 
-            <ChatApp />
             <Footer />
         </main>
         

@@ -11,8 +11,6 @@ import NotFound from './components/NotFound';
 import Layout from './hocs/Layout';
 import PrivateRoute from './components/privateRoute';
 import ChatApp from './ChatApp'
-import logo from './images/logo.jpeg';
-import Footer from './components/Footer/Footer';
 
 
 
@@ -36,8 +34,8 @@ const App = () => (
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/signup' component={SignUp} />
                     <Route component={NotFound} />
-                    <ChatApp />
                 </Switch>
+                <ChatApp />
             </Layout>
         </Router>
     </Provider>

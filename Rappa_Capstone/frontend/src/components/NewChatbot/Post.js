@@ -31,7 +31,7 @@ class Post extends Component {
 
   render() {
       return (
-          <div>Thank you! You will hear from a Rappa Realty Agent shortly!</div>
+          <div>Thank you! We look forward to helping you out! An agent will be contatcing you shortly! 😁 🏡</div>
       )
     
     }

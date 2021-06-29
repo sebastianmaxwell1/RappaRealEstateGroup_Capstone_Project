@@ -4,12 +4,15 @@ import { ThemeProvider } from 'styled-components';
 import Post from './Post';
 
 
+
 //config options
 
 const config ={
-    width: "400px",
-    height: "500px",
+    width: "350px",
+    height: "400px",
     floating: true,
+    headerTitle: 'Rappa Realty Group ',
+    hideBotAvatar: true,
   };
 
   //theme
@@ -33,6 +36,28 @@ class SimpleForm extends Component {
           <Chatbot
           steps={[
             {
+                id:'intro', 
+                message:'Welcome to Rappa Realty Group! Feel free to browse the provided listings! Would you like one of our agents to contact you?', 
+                trigger:'intro-user',
+              },
+              {
+                id:'intro-user', 
+                options:[
+                {value:'y', label:'Yes', trigger:'yes-response'},
+                {value:'n', label:'No', trigger:'no-response'},
+                ] 
+              },
+              {
+                id:'yes-response', 
+                message:'Great! Please answer the following short questions and an agent will be with you shortly.', 
+                trigger:'q-name',
+              },
+              {
+                id:'no-response', 
+                message:'Sorry to hear that. If you need any help at all, checkout our Team Rappa tab at the top for our agents contact information. Have a great day!',
+                end:true,
+              },
+            {
               id:'q-name', 
               message:'What is your name?', 
               trigger:'name',
@@ -54,7 +79,7 @@ class SimpleForm extends Component {
             },
             {
               id:'q-email', 
-              message:'Almost done! what is you email?', 
+              message:'Halfway there! What is you email?', 
               trigger:'email',
             },
             {
@@ -64,7 +89,7 @@ class SimpleForm extends Component {
             },
             {
               id:'q-subject', 
-              message:'Does this pretain to buying, selling or renting a home?', 
+              message:'Are you looking to buy, sell, rent or just need some more information?', 
               trigger:'subject',
             },
             {
@@ -75,7 +100,7 @@ class SimpleForm extends Component {
             
             {
               id:'q-message',
-              message:'Finally! Please list all questions and concerns here!',
+              message:'Finally! If you have anything else to add, please add that now. If not, just type "n/a" ',
               trigger:'message',
             },
             {
@@ -85,7 +110,7 @@ class SimpleForm extends Component {
             },
             {
                 id:'q-submit',
-                message:'Do you wish to submit?',
+                message:'Thank you! Would you now like to submit to Rappa Realty Group?',
                 trigger:'submit',
             },
             {
