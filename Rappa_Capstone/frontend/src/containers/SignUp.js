@@ -90,7 +90,7 @@ const SignUp = ({ setAlert, signup, isAuthenticated }) => {
                 <button className='auth__form__button'>Register with Rappa!</button>
             </form>
             <p className='auth__authtext'>
-                <Link className='auth__authtext__link' to='/login'>Sign In</Link>
+                <Link className='auth__authtext__link' to='/login'>Already registered? Log in here </Link>
             </p>
         
         </div>

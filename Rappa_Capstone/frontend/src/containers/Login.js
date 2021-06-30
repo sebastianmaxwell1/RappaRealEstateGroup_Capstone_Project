@@ -61,7 +61,7 @@ const Login = ({ login, isAuthenticated }) => {
                 <button className='auth__form__button'>Login</button>
             </form>
             <p className='auth__authtext'>
-                What can RAPPA sell for you? <br></br>Join us and find out! <Link className='auth__authtext__link' to='/signup'>Sign Up</Link>
+                Not registered? Sign up to find out what RAPPA can sell for you! ➡️    <Link className='auth__authtext__link' to='/signup'>Sign Up</Link>
             </p>
             
         </div>
